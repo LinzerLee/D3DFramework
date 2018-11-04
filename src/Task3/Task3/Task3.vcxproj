@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6F7B833B-4010-45C2-BF4C-A58CA08346F8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Task3</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Effects11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="3rd\DirectXTex\DDSTextureLoader\DDSTextureLoader.h" />
+    <ClInclude Include="3rd\DirectXTex\WICTextureLoader\WICTextureLoader.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="BoardModel.h" />
+    <ClInclude Include="BoardRender.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Effects.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="GeometryGenerator.h" />
+    <ClInclude Include="include\d3dx11effect.h" />
+    <ClInclude Include="include\d3dxGlobal.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="MathHelper.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="ModelObject.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="Sky.h" />
+    <ClInclude Include="SkyRender.h" />
+    <ClInclude Include="MeshModel.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Task3App.h" />
+    <ClInclude Include="Terrain.h" />
+    <ClInclude Include="TerrainRender.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Waves.h" />
+    <ClInclude Include="WavesModel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="3rd\DirectXTex\DDSTextureLoader\DDSTextureLoader.cpp" />
+    <ClCompile Include="3rd\DirectXTex\WICTextureLoader\WICTextureLoader.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="BoardModel.cpp" />
+    <ClCompile Include="BoardRender.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Effects.cpp" />
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GeometryGenerator.cpp" />
+    <ClCompile Include="MathHelper.cpp" />
+    <ClCompile Include="ModelObject.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="Sky.cpp" />
+    <ClCompile Include="SkyRender.cpp" />
+    <ClCompile Include="MeshModel.cpp" />
+    <ClCompile Include="Task3App.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="TerrainRender.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="Waves.cpp" />
+    <ClCompile Include="WavesModel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\Effects11.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\LightHelper.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="FX\Terrain.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\blend.dds" />
+    <Image Include="Textures\darkdirt.dds" />
+    <Image Include="Textures\desertcube1024.dds" />
+    <Image Include="Textures\grass.dds" />
+    <Image Include="Textures\grasscube1024.dds" />
+    <Image Include="Textures\lightdirt.dds" />
+    <Image Include="Textures\snow.dds" />
+    <Image Include="Textures\snowcube1024.dds" />
+    <Image Include="Textures\stone.dds" />
+    <Image Include="Textures\sunsetcube1024.dds" />
+    <Image Include="Textures\terrain.dds" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Textures\terrain.raw" />
+    <None Include="Textures\terrain2.raw" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\Basic.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="FX\Sky.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\color.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\Board.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\Fire.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="FX\Rain.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="FX\Snow.fx">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x86\fxc.exe" /T fx_5_0 /Fo %(RelativeDir)\%(Filename).fxo FX\%(Filename).fx $(InputPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(InputName).fxo;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
